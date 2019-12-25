@@ -63,11 +63,11 @@ public class TimeSpan {
     public void mult(double times) {
         double minute = round(this.minutes * times, 0);
         setMinutes((int) (minute % 60));
+        double  hour = round(this.hours * times, 0);
+        setHours((int) hour);
         if (minute >= 60){
             setHours(this.hours + (int) (minute / 60));
         }
-        double  hour = round(this.hours * times, 0);
-        setHours((int) hour);
 
     }
 
